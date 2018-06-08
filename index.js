@@ -1,5 +1,5 @@
 let { readFileSync } = require("fs");
-let regex = /sourceMappingURL=data:application\/json;base64,(\S+)/;
+let regex = /sourceMappingURL=data:application\/json;(?:charset=utf-8;)base64,(\S+)/;
 
 module.exports = (fileName, attributes) => {
 	let result = regex.exec(readFileSync(fileName));
