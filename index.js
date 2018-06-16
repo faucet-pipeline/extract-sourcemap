@@ -1,9 +1,8 @@
-let { readFileSync } = require("fs");
 let findUrl = /sourceMappingURL=data:(\S+)/;
 let findMap = /;base64,(\S+)$/;
 
-module.exports = (fileName, attributes) => {
-	let url = firstMatchedGroup(findUrl, readFileSync(fileName));
+module.exports = (source, attributes) => {
+	let url = firstMatchedGroup(findUrl, source);
 	let map = firstMatchedGroup(findMap, url);
 	if(!map) {
 		throw new Error("No Source Map found");
@@ -13,7 +12,7 @@ module.exports = (fileName, attributes) => {
 	Object.keys(sourceMap).
 		filter(key => !attributes.includes(key)).
 		forEach(key => delete sourceMap[key]);
-	return JSON.stringify(sourceMap);
+	return sourceMap;
 };
 
 function firstMatchedGroup(regex, data) {
