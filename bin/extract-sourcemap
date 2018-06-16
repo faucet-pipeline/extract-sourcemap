@@ -2,6 +2,7 @@
 "use strict";
 
 let extractSourcemap = require("..");
+let { readFileSync } = require("fs");
 let [name, ...attributes] = process.argv.splice(2);
 
 if(!name) {
@@ -9,4 +10,6 @@ if(!name) {
 	process.exit(1);
 }
 
-console.log(extractSourcemap(name, attributes)); // eslint-disable-line no-console
+let source = readFileSync(name);
+let sourcemap = extractSourcemap(source, attributes);
+console.log(JSON.stringify(sourcemap)); // eslint-disable-line no-console
