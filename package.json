@@ -1,12 +1,13 @@
 {
   "name": "extract-sourcemap",
   "version": "1.0.0",
-  "author": "Lucas Dohmen <lucas@dohmen.io> (https://lucas.dohmen.io/)",
-  "description": "Extract the sourcemap from a JS or CSS file as JSON",
-  "main": "index.js",
+  "author": "Lucas Dohmen <lucas@dohmen.io> (https://lucas.dohmen.io)",
+  "license": "MPL-2.0",
   "bin": {
     "extract-sourcemap": "bin/extract-sourcemap"
   },
+  "description": "Extract the sourcemap from a JS or CSS file",
+  "main": "index.js",
   "homepage": "https://github.com/faucet-pipeline/extract-sourcemap",
   "repository": {
     "type": "git",
@@ -15,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/faucet-pipeline/extract-sourcemap/issues"
   },
-  "license": "MPL-2.0",
   "devDependencies": {
     "eslint-config-fnd": "^1.4.0",
     "mocha": "^5.2.0"
