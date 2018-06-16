@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/faucet-pipeline/extract-sourcemap/issues"
   },
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha test/test.js"
+  }
 }
