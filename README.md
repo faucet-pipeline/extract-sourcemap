@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/faucet-pipeline/extract-sourcemap.svg?branch=master)](https://travis-ci.org/faucet-pipeline/extract-sourcemap)
 [![Greenkeeper badge](https://badges.greenkeeper.io/faucet-pipeline/extract-sourcemap.svg)](https://greenkeeper.io)
 
+**This package is no longer maintained**
+
 Extract the sourcemap from a JS or CSS file
 
 ## Usage via CLI
